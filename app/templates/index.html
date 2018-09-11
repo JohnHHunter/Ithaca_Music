@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Ithaca Music!</h1>
+    {% for artists in artists %}
+    <div><p>{{ artists.band.bandname }}</p></div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Local Music</title>
+        {% else %}
+        <title>Welcome to Local Music</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Local Music:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('artists') }}">Artists</a>
+            <a href="{{ url_for('newartist') }}">New Artists</a>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
